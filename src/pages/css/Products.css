@@ -1,0 +1,116 @@
+.product-page-upper-line{
+    width: 100%;
+    height: 10vh;
+    margin-top: 10px;
+    border-top: 4px solid black;
+    background-color: #e6e7e8;
+}
+.product-page-maincontent{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    font-family: Sheepman;
+}
+.product-page-image{
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+.product-page-image img{
+    width: 40%;
+    height: 100%;
+    gap: 20px;
+    margin: 0 20px;
+}
+.product-page-details{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.product-page-header{
+    width: 100%;
+    height: 5vh;
+    background-color: #909396ad;
+}
+.product-page-productname{
+    width: 100%;
+    height: 100%;
+    font-style: bold;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: start;
+    margin-top: 10px;
+}
+.product-page-price_rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 20px;
+}
+.product-page-price_rating span{
+    color: rgb(223, 89, 64);
+}
+.product-page-sizes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    margin: 30px 10px;
+
+}
+.product-page-sizes div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(238, 233, 233);
+    margin-left: 20px;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.product-page-description-heading{
+    font-family: Sheepman;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+}
+.product-page-description-text{
+    width: 100%;
+    height: 10vh;
+    background-color: #e9eceead;
+}
+.product-page-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+.product-page-buttons button{
+    background-color: #FCAB35;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+.product-page-buttons button:hover{
+    background-color: rgb(223, 89, 64);
+}
+
+.Size.selected {
+    border: 1px solid red;
+    font-weight: bold;
+  }

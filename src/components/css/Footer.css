@@ -1,0 +1,105 @@
+.footer-main {
+    background-color: #E6E7E8;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-top: 45px;
+    font-family: "Sheepman";
+}
+
+.footer-upper-line {
+    height: 10vh;
+    background: linear-gradient(to right, #E26040, #F08A39);
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-lower-line {
+    height: 13vh;
+    background: linear-gradient(to right, #E26040, #F08A39);
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 13.5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-lower-V-line{
+    width: 2px;
+    height: 38%;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: black;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.first-content {
+    flex: 1;
+    padding: 10px;
+}
+
+.first-content img {
+    max-width: 100px;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.second-content {
+    flex: 2;
+    padding: 10px;
+}
+
+.footer-table-content {
+    margin-top: 10px;
+}
+
+.footer-table-content table {
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-table-content th,
+.footer-table-content td {
+    padding: 10px;
+    text-align: left;
+}
+
+.footer-table-content th {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(223, 89, 64);
+}
+
+.footer-table-content td{ 
+    padding-left: 20px;
+}
+
+.payment-section{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding-top: 25px;
+    color: rgb(223, 89, 64);
+}
+
+.payment-section img{
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+}

@@ -1,0 +1,42 @@
+.landing-main{
+    border-top: 4px solid black;
+    margin-top: 20px;
+}
+.category-text {
+    font-family: Sheepman;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(223, 89, 64);
+    margin-top: 30px;
+}
+
+.category-section {
+    width: 70%; 
+    height: 100%;
+    margin: 0 auto;
+}
+
+.three-column, .four-column {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.three-column {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.four-column {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.women-section{
+    margin-top: 40px;
+}
+
+.three-column-image, .four-column-image img{
+    border-radius: 10px;
+}

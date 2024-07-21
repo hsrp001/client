@@ -1,0 +1,28 @@
+.shop-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.shop-button button {
+    background-color: #FCAB35;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.shop-button button:hover {
+    background-color: rgb(223, 89, 64);
+}
+
+.shop-button button:focus {
+    background-color: rgb(223, 89, 64);
+}
