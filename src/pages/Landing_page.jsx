@@ -31,14 +31,14 @@ function Landing_page() {
       </div>
       <div className="category-text">CATEGORIES</div>
       <div className="category-section">
-        <div className="three-column">
+        <div className="three-column  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {mensfirstThreeImages.map((image, index) => (
             <div className="image">
               <Link to="/Mens"><img key={index} src={image} alt="Category" /></Link>
             </div>
           ))}
         </div>
-        <div className="four-column">
+        <div className="four-column grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {mensnextFourImages.map((image, index) => (
             <div className="image">
               <Link to="/Mens"><img key={index} src={image} alt="Category" /></Link>
@@ -46,7 +46,7 @@ function Landing_page() {
           ))}
         </div>
       </div>
-      <div className="women-section">
+      <div className="women-section   ">
         <Sliding_images images={womens_sliding_image} />
       </div>
       <div>
@@ -54,14 +54,14 @@ function Landing_page() {
       </div>
       <div className="category-text">CATEGORIES</div>
       <div className="category-section">
-        <div className="three-column">
+        <div className="three-column  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {womensfirstThreeImages.map((image, index) => (
             <div className="image">
               <Link to="/Womens"><img key={index} src={image} alt="Category" /></Link>
             </div>
           ))}
         </div>
-        <div className="four-column">
+        <div className="four-column grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {womensnextFourImages.map((image, index) => (
             <div className="image">
               <Link to="/Womens"><img key={index} src={image} alt="Category" /></Link>

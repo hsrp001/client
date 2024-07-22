@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./css/Mens.css";
-import Sliding_images from "../components/Sliding_images";
 import Men_Products_Data from "../Men_Products_Data.jsx";
-import heart_icon from "../icons/heart.svg";
-import search_icon from "../icons/search.svg";
-import {
-  mens_sliding_image,
-  mens_category_image,
-} from "../components/import_images";
 
 function Mens() {
   useEffect(() => {
@@ -16,17 +8,8 @@ function Mens() {
   }, []);
 
 
-  const storeProductsDetails = (id, name) => {
-    const newProduct = {
-      id: id,
-      name: name,
-    };
-    setProducts(newProduct);
-  };
   
-  const mensFirstThreeImages = mens_category_image.slice(0, 3);
-  const mensNextFourImages = mens_category_image.slice(3);
-
+ 
   return (
     <div>
       <div className="page">MENS PRODUCTS</div>
@@ -54,26 +37,8 @@ function Mens() {
           </div>
         ))}
       </div>
-      <div className="sliding_image">
-        <Sliding_images images={mens_sliding_image} />
-      </div>
-      <div className="text">FEATURED PRODUCTS</div>
-      <div className="products">
-        <div className="three-column">
-          {mensFirstThreeImages.map((image, index) => (
-            <div className="image" key={index}>
-              <img src={image} alt="Category" />
-            </div>
-          ))}
-        </div>
-        <div className="four-column">
-          {mensNextFourImages.map((image, index) => (
-            <div className="image" key={index}>
-              <img src={image} alt="Category" />
-            </div>
-          ))}
-        </div>
-      </div>
+    
+    
     </div>
   );
 }

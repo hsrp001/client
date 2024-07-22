@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './css/Header.css';
 import logo from '../icons/logo.png'; 
-import cart from '../icons/cart.svg';
-import signIn from '../icons/human.svg';
-import options from '../icons/options.svg';
+import carts from '../icons/cart.svg';
+import { CartContext } from '../context/Cardcontext';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,7 +11,7 @@ function Header() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
+  const  {setIsCartOpen ,cart }  =  useContext(CartContext)
   return (
     <header className="header">
       <div className="upper-line"></div>
@@ -27,28 +26,26 @@ function Header() {
           <div className="nav-item"><Link to="/Contact">CONTACT US</Link></div>
         </nav>
         <div className="icons-container flex items-center space-x-4">
-          <div className="icon-item">
-            <div className='cart-box'>
-              <img src={cart} alt="Cart" className="icon" />
+       
+          <div className="icon-item  relative" onClick={()=>  setIsCartOpen((prev)=>!prev)}>
+            <span className=' absolute right-0 -top-3   text-red-600 bg-white shadow-lg'>{cart.length}</span>
+            <div className='cart-box'  >
+              
+              <img src={carts} alt="Cart" className="icon" />
             </div>
           </div>
-          <div className="icon-item">
-            <button className="sign-in-button flex items-center">
-              <img src={signIn} alt="Sign In" className="icon mr-1" /> Sign In
-            </button>
-          </div>
-        </div>
-        <div className='Header-options '>
-          <button onClick={toggleMobileMenu}  className=' bg-slate-700  text-4xl'>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+     
+          <div onClick={toggleMobileMenu}  className=' block cursor-pointer  md:hidden  text-4xl'>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
 </svg>
 
-          </button>
+     </div>
+        
         </div>
       </div>
       {isMobileMenuOpen && (
-        <nav className="mobile-nav-menu md:hidden bg-gray-800 text-white p-4">
+        <nav className="mobile-nav-menu  md:hidden bg-gray-50 text-black shadow-sm p-4">
           <div className="nav-item py-2"><Link to="/" onClick={toggleMobileMenu}>Home</Link></div>
           <div className="nav-item py-2"><Link to="/Mens" onClick={toggleMobileMenu}>MEN</Link></div>
           <div className="nav-item py-2"><Link to="/Womens" onClick={toggleMobileMenu}>WOMEN</Link></div>
