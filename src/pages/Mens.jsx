@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./css/Mens.css";
 import Men_Products_Data from "../Men_Products_Data.jsx";
+import { CartContext } from "../context/Cardcontext.jsx";
 
 function Mens() {
   useEffect(() => {
@@ -9,10 +10,12 @@ function Mens() {
 
 
   
+
+  const{addToCart} =  useContext(CartContext)
  
   return (
     <div>
-      <div className="page">MENS PRODUCTS</div>
+      <div className="page  mt-[100px]">MENS PRODUCTS</div>
       <div className="products  grid-cols-1 md:grid-cols-2  lg:grid-cols-3 max-[500px]:w-[90%] ">
         {Men_Products_Data.map((product, index) => (
           <div key={index} className="product-card">
@@ -28,7 +31,7 @@ function Mens() {
                 alt={product.productName}
               />
             
-              <div className="add-to-cart">Add to Cart</div>
+            <div className="add-to-cart" onClick={() => addToCart(product )}>Add to Cart</div>
             </div>
             <div className="product-info">
               <h3 className="product-name">{product.productName}</h3>

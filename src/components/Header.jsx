@@ -13,7 +13,7 @@ function Header() {
   };
   const  {setIsCartOpen ,cart }  =  useContext(CartContext)
   return (
-    <header className="header">
+    <header className="header fixed top-0 left-0 right-0 max-h-28  z-10  bg-white  shadow-sm">
       <div className="upper-line"></div>
       <div className="main flex items-center justify-between p-4">
         <div className="logo-container">

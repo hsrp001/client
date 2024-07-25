@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Women_Products_Data from "../Women_Products_Data.jsx";
 import { CartContext } from "../context/Cardcontext.jsx";
-import Cart from "./Cart.jsx";
+
 
 
 
@@ -16,7 +16,7 @@ function Womens() {
   return (
     <div>
  
-      <div className="page">WOMENS PRODUCTS</div>
+      <div className="page mt-[100px]">WOMENS PRODUCTS</div>
       <div className="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-[500px]:w-[90%]">
         {Women_Products_Data.map((product, index) => (
           <div key={index}>

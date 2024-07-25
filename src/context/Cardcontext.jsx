@@ -6,12 +6,19 @@ const CartContext = createContext(null);
 // Cart provider component
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+
   const [isCartOpen, setIsCartOpen] = useState(false);
   console.log(cart);
 
   const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
-    setIsCartOpen(true)
+    const data = cart.find((cartdata)=>  cartdata  === item)
+    
+    if(!data)
+    {
+
+      setCart((prevCart) => [...prevCart, item]);
+    }
+  
   };
 
   const removeFromCart = (item) => {

@@ -1,8 +1,13 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/Cardcontext'
+import { Link } from 'react-router-dom'
 
 function Cart() {
   const  {setIsCartOpen ,cart ,removeFromCart}  =  useContext(CartContext)
+  const totaldata = cart.map((i)=> i.price)
+  const  totalprice =  totaldata.reduce((partialSum, a) => partialSum + a, 0)
+ 
+
   return (
     <div>
       <div class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true" >
@@ -71,11 +76,13 @@ function Cart() {
             <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
               <div class="flex justify-between text-base font-medium text-gray-900">
                 <p>Subtotal</p>
-                <p>$262.00</p>
+                <p>${totalprice}</p>
               </div>
+
               <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
               <div class="mt-6">
-                <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+
+                <Link to={'/payment'} class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</Link>
               </div>
            
             </div>

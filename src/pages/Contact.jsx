@@ -3,7 +3,7 @@ import React from 'react'
 function Contact() {
   return (
     <div>
-        <div class="mt-6">
+        <div class="mt-32">
             <div class="grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
                 <div>
                     <h1 class="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
